@@ -1,9 +1,9 @@
-#include <libcpplog/data_structures/tree/Node.hpp>
+#include <tree/Node.hpp>
 
 #include <span>
 #include <utility>
 
-namespace cpplog::data_structures::tree {
+namespace data_structures::tree {
 
 	template <typename TIdentifier>
 	Node<TIdentifier>::Node(const TIdentifier& id) noexcept

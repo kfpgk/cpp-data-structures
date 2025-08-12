@@ -1,6 +1,6 @@
 #pragma once
 
-namespace cpplog::data_structures::tree::unit_test {
+namespace data_structures::tree::unit_test {
 
 	/**
 	 * @brief Unit test for the Node class

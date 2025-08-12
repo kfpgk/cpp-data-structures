@@ -4,7 +4,7 @@
 #include <span>
 #include <vector>
 
-namespace cpplog::data_structures::tree {
+namespace data_structures::tree {
 
 	/**
 	 * @brief Node class for a tree structure
@@ -120,4 +120,4 @@ namespace cpplog::data_structures::tree {
 
 }
 
-#include <libcpplog/data_structures/tree/Node.tpp>
+#include <tree/Node.tpp>

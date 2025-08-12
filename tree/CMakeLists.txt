@@ -8,10 +8,6 @@ if(BUILD_UNIT_TESTS)
         PRIVATE
             ${CMAKE_SOURCE_DIR}
     )
-    target_link_libraries(TreeNode_test
-        PRIVATE
-            libcpplog
-    )
     add_test(
         NAME "UT data_structures::tree::Node"
         COMMAND TreeNode_test

@@ -1,5 +1,5 @@
-#include <libcpplog/data_structures/tree/Node.test.hpp>
-#include <libcpplog/data_structures/tree/Node.hpp>
+#include <tree/Node.test.hpp>
+#include <tree/Node.hpp>
 
 #include <array>
 #include <cassert>
@@ -11,7 +11,7 @@
 
 int main(int argc, char* arv[]) {
 
-	cpplog::data_structures::tree::unit_test::NodeTest test;
+	data_structures::tree::unit_test::NodeTest test;
 
 	test.testGetId();
 
@@ -25,7 +25,7 @@ int main(int argc, char* arv[]) {
 	return 0;
 }
 
-namespace cpplog::data_structures::tree::unit_test {
+namespace data_structures::tree::unit_test {
 
 	void NodeTest::testGetId() const {
 		std::cout << std::source_location::current().file_name()
