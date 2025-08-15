@@ -4,9 +4,9 @@ if(BUILD_UNIT_TESTS)
     add_executable(TreeNode_test
         Node.test.cpp
     )
-    target_include_directories(TreeNode_test 
+    target_link_libraries(TreeNode_test
         PRIVATE
-            ${CMAKE_SOURCE_DIR}
+            cpp-data-structures
     )
     add_test(
         NAME "UT data_structures::tree::Node"

@@ -1,5 +1,5 @@
-#include <tree/Node.test.hpp>
-#include <tree/Node.hpp>
+#include <cpp-data-structures/tree/Node.test.hpp>
+#include <cpp-data-structures/tree/Node.hpp>
 
 #include <array>
 #include <cassert>
