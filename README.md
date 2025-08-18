@@ -43,33 +43,42 @@ using `git submodule` for example.
 
 #### Using installation of cpp-data-structures
 
-Get access to the library using `find_package()` and extract include paths from the target `cpp-data-structures`.
-Add these include paths to the consuming target using `target_include_directories()`.
-In `target_include_directories`, replace `<PUBLIC|PRIVATE|INTERFACE>` with the appropriate keyword.
+Get access to the library using `find_package()`.
+You can then link to the `cpp-data-structures` target using namespace `CPP_DATA_STRUCTURES::`.
+
+In `target_link_libraries`, replace `<PUBLIC|PRIVATE|INTERFACE>` with the appropriate keyword.
+Replace `<target-name>` with the name of your target that uses the library.
 
 ```cmake
+# Search installation of cpp-data-structures
 find_package(cpp-data-structures REQUIRED CONFIG)
-get_target_property(cpp_data_structures_INCLUDE_DIR CPP_DATA_STRUCTURES::cpp-data-structures 
-    INTERFACE_INCLUDE_DIRECTORIES)
 
-target_include_directories(<target-name>
+# and link to it
+target_link_libraries(<target-name>
     <PUBLIC|PRIVATE|INTERFACE>
-        ${cpp_data_structures_INCLUDE_DIR}
+        # Imported target uses namespace
+        CPP_DATA_STRUCTURES::cpp-data-structures
 )
 ```
 
 #### Using cpp-data-structures as submodule
 
-Specify the path to the submodule and add it to the include paths using `target_include_directories()`.
-Adjust the path for `cpp_data_structures_INCLUDE_DIR` as needed (just an example).
-In `target_include_directories`, replace `<PUBLIC|PRIVATE|INTERFACE>` with the appropriate keyword.
+Add the repository as a submodule to your project and include the library in your `CMakeLists.txt` using `add_subdirectory()`.
+Just link to the library target `cpp-data-structures` directly. 
+It will be available locally without a namespace.
 
+> To use the repository as a submodule, I recommend integrating it into your project using `git submodule` or similar. Another option is to copy the contents and manage it in the consuming repository.
+
+In `target_link_libraries`, replace `<PUBLIC|PRIVATE|INTERFACE>` with the appropriate keyword.
+Replace `<target-name>` with the name of your target that uses the library.
 ```cmake
-set(cpp_data_structures_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../cpp-data-structures")
+# Add the cpp-data-structures submodule locally
+add_subdirectory(cpp-data-structures)
 
-target_include_directories(<target-name>
-    <PUBLIC|PRIVATE|INTERFACE>
-        ${cpp_data_structures_INCLUDE_DIR}
+# We expect cpp-data-structures to be available locally without a namespace
+target_link_libraries(<target-name>
+    INTERFACE
+        cpp-data-structures
 )
 ```
 
