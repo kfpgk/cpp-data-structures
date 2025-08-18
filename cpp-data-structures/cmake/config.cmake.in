@@ -1,0 +1,6 @@
+@PACKAGE_INIT@
+
+check_required_components(cpp-data-structures)
+
+# Expect targets file in the same directory as this config file
+include("${CMAKE_CURRENT_LIST_DIR}/cpp-data-structures-targets.cmake")
