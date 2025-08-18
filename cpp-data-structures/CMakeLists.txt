@@ -4,7 +4,11 @@ set(cpp_data_structures_cmake_code_dir "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 # Set global variables needed for installation and packaging
 # Installation directories (esp. xxx_INSTALL_INCLUDEDIR) are also used by
 # consumers. Refer to target_include_directories()'s INSTALL_INTERFACE.
-include("${cpp_data_structures_cmake_code_dir}/set-install-dirs.cmake")
+if(cpp_data_structures_STANDALONE_BUILD)
+    include("${cpp_data_structures_cmake_code_dir}/set-install-dirs-standalone.cmake")
+else()
+    include("${cpp_data_structures_cmake_code_dir}/set-install-dirs-submodule.cmake")
+endif()
 include("${cpp_data_structures_cmake_code_dir}/set-targets-var.cmake")
 
 # Header only library target
@@ -21,13 +25,8 @@ target_include_directories(cpp-data-structures
         $<INSTALL_INTERFACE:${cpp_data_structures_INSTALL_INCLUDEDIR}>
 )
 
-# We do not want to install or package if this is not a stand alone build
-if(cpp_data_structures_STANDALONE_BUILD)
+include("${cpp_data_structures_cmake_code_dir}/install.cmake")
 
-    include("${cpp_data_structures_cmake_code_dir}/install.cmake")
-
-    include("${cpp_data_structures_cmake_code_dir}/create-package.cmake")
-
-endif()
+include("${cpp_data_structures_cmake_code_dir}/create-package.cmake")
 
 add_subdirectory("tree")

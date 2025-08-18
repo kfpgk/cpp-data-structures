@@ -41,6 +41,12 @@ This library can easily be integrated into a CMake project.
 Either install it as described [here](#Installation) or directly include it in your project
 using `git submodule` for example.
 
+The cmake package consists of two <b>components</b>:
+- <b>Devel</b>: Contains the public headers of the library.
+- <b>CMakeConfig</b>: Contains the CMake configuration files for the library.
+
+Choosing no components will always use the complete library.
+
 #### Using installation of cpp-data-structures
 
 Get access to the library using `find_package()`.

@@ -1,3 +1,5 @@
+# This script uses standard installation locations
+
 include(GNUInstallDirs)
 
 if(NOT DEFINED cpp_data_structures_INSTALL_INCLUDEDIR)

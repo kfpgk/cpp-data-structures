@@ -14,10 +14,7 @@ configure_package_config_file(
 
 # Install config file to install tree
 install(
-  FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/cmake/${cpp_data_structures_config_file}"
-  DESTINATION
-    "${cpp_data_structures_INSTALL_CMAKECONFIGDIR}"
-  COMPONENT
-    Devel
+    FILES "${CMAKE_CURRENT_BINARY_DIR}/cmake/${cpp_data_structures_config_file}"
+    DESTINATION "${cpp_data_structures_INSTALL_CMAKECONFIGDIR}"
+    COMPONENT CMakeConfig
 )
