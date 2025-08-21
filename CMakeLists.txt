@@ -23,3 +23,7 @@ if(cpp_data_structures_STANDALONE_BUILD)
 endif()
 
 add_subdirectory("cpp-data-structures")
+
+if(BUILD_UNIT_TESTS)
+    enable_testing()
+endif()

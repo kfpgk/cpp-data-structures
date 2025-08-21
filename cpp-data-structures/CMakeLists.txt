@@ -30,3 +30,7 @@ include("${cpp_data_structures_cmake_code_dir}/install.cmake")
 include("${cpp_data_structures_cmake_code_dir}/create-package.cmake")
 
 add_subdirectory("tree")
+
+if(BUILD_UNIT_TESTS)
+    enable_testing()
+endif()
