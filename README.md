@@ -33,17 +33,15 @@ This repository holds the source code, documentation and tests for the `C++` dat
 
 ## Usage
 
-The library consists of a `tree` package.
-
 ### CMake Integration
 
 This library can easily be integrated into a CMake project. 
 Either install it as described [here](#Installation) or directly include it in your project
 using `git submodule` for example.
 
-The cmake package consists of two <b>components</b>:
-- <b>Devel</b>: Contains the public headers of the library.
-- <b>CMakeConfig</b>: Contains the CMake configuration files for the library.
+The cmake target consists of two <b>components</b>:
+- <b>Devel</b>: Contains the public headers of the library
+- <b>CMakeConfig</b>: Contains the CMake configuration files for the library
 
 Choosing no components will always use the complete library.
 
@@ -90,7 +88,7 @@ target_link_libraries(<target-name>
 
 ### Headers
 
-The library provides the following headers.
+The library consists of a `tree` package. It provides the following headers.
 
 ```cpp
 // Header for a node object inside a tree data structure
