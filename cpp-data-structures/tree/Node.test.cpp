@@ -34,7 +34,7 @@ namespace data_structures::tree::unit_test {
 
 		using IntNode = Node<int>;
 
-		IntNode node(3);
+		IntNode node{ 3 };
 
 		assert(node.getId() == 3);
 	}
@@ -46,8 +46,8 @@ namespace data_structures::tree::unit_test {
 
 		using StrNode = Node<std::string>;
 
-		StrNode node("Root");
-		StrNode child("Child");
+		StrNode node{ "Root" };
+		StrNode child{ "Child" };
 
 		node.add(child);
 
@@ -61,8 +61,8 @@ namespace data_structures::tree::unit_test {
 
 		using StrNode = Node<std::string>;
 
-		StrNode node("Root");
-		StrNode child("Child");
+		StrNode node{ "Root" };
+		StrNode child{ "Child" };
 
 		node.add(std::move(child));
 
@@ -78,7 +78,7 @@ namespace data_structures::tree::unit_test {
 
 		std::array<std::string, 4> expected = { "Child1", "Child2", "Child3", "Child4" };
 
-		StrNode root("Root");
+		StrNode root{ "Root" };
 		for (const auto& child : expected) {
 			root.add(StrNode(child));
 		}
@@ -98,7 +98,7 @@ namespace data_structures::tree::unit_test {
 
 		std::array<std::string, 4> expected = { "Child1", "Child2", "Child3", "Child4" };
 
-		StrNode root("Root");
+		StrNode root{ "Root" };
 		for (const auto& child : expected) {
 			root.add(StrNode(child));
 		}
