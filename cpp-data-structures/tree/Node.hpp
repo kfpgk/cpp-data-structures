@@ -106,9 +106,9 @@ namespace data_structures::tree {
 		std::span<Node> getChildNodes();
 
 		/**
-		 * @brief Get the child nodes
+		 * @brief Get the child nodes in read only mode
 		 *
-		 * @return A span over the child nodes
+		 * @return A span over the const child nodes
 		 */
 		std::span<const Node> getChildNodes() const;
 
