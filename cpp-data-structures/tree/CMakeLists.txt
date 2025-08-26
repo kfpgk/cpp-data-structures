@@ -9,7 +9,7 @@ if(BUILD_UNIT_TESTS)
             cpp-data-structures
     )
     add_test(
-        NAME "UT data_structures::tree::Node"
+        NAME "UT cpp_data_structures::tree::Node"
         COMMAND TreeNode_test
     )
 

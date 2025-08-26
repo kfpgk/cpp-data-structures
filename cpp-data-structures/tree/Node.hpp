@@ -4,7 +4,7 @@
 #include <span>
 #include <vector>
 
-namespace data_structures::tree {
+namespace cpp_data_structures::tree {
 
 	/**
 	 * @brief Node class for a tree structure

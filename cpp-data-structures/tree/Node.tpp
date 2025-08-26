@@ -3,7 +3,7 @@
 #include <span>
 #include <utility>
 
-namespace data_structures::tree {
+namespace cpp_data_structures::tree {
 
 	template <typename TIdentifier>
 	Node<TIdentifier>::Node(const TIdentifier& id) noexcept

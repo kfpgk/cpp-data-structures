@@ -11,7 +11,7 @@
 
 int main(int argc, char* arv[]) {
 
-	data_structures::tree::unit_test::NodeTest test;
+	cpp_data_structures::tree::unit_test::NodeTest test;
 
 	test.testGetId();
 
@@ -25,7 +25,7 @@ int main(int argc, char* arv[]) {
 	return 0;
 }
 
-namespace data_structures::tree::unit_test {
+namespace cpp_data_structures::tree::unit_test {
 
 	void NodeTest::testGetId() const {
 		std::cout << std::source_location::current().file_name()
