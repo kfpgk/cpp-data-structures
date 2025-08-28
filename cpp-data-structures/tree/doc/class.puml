@@ -1,6 +1,6 @@
-@startuml utils-tree-class-diagram
+@startuml tree-class-diagram
 
-title utils tree class diagram
+title tree class diagram
 
 class Node<TId> {
     == public ==

@@ -88,7 +88,7 @@ target_link_libraries(<target-name>
 
 ### Headers
 
-The library consists of a `tree` package. It provides the following headers.
+The library consists of a `tree` component. It provides the following headers.
 
 ```cpp
 // Header for a node object inside a tree data structure

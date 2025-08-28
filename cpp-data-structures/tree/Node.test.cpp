@@ -21,7 +21,7 @@ int main(int argc, char* arv[]) {
 	test.testIteratingRangeBased();
 	test.testIteratingChildNodes();
 
-	std::cout << "UT: data_structures::tree::Node passed." << std::endl;
+	std::cout << "UT: cpp_data_structures::tree::Node passed." << std::endl;
 	return 0;
 }
 

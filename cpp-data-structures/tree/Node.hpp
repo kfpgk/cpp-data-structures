@@ -9,9 +9,9 @@ namespace cpp_data_structures::tree {
 	/**
 	 * @brief Node class for a tree structure
 	 * 
-	 * @details
-	 * Patterns:
-	 *  - Tree
+	 * Designed for simple, recursive tree structures and direct node manipulation.
+	 * 
+	 * @tparam TIdentifier The type of the identifier for the node
 	 */
 	template <typename TIdentifier>
 	class Node {
